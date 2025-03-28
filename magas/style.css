@@ -1,0 +1,277 @@
+
+
+
+body {
+    font-family: Comic Sans, Comic Sans MS, cursive;
+}
+
+#logo {
+    font-family: 'Yatra One', cursive;
+    font-size: 26px;
+    letter-spacing: 1.5px;
+    text-shadow: 3px 3px 3px orangered;
+    color: #000;
+}
+
+#home {
+    background-image: url("Free-Stars-Background.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+h1 {
+    margin: 30px auto;
+}
+
+#navigation {
+    background-color: sandybrown;
+    font-size: 30px;
+    font-weight: bold;
+    border-radius: 15px;
+    padding: 20px;
+    margin: 0px auto;
+    max-width: 560px;
+    text-transform: uppercase;
+    -moz-box-shadow: 0 0 10px #777777;
+    -webkit-box-shadow: 0 0 10px #777777;
+    box-shadow: 0 0 10px #777777;
+}
+
+    #navigation li {
+        display: inline;
+        padding: 20px 10px;
+    }
+
+    #navigation a {
+        text-decoration: none;
+    }
+
+#purple:link, #purple:visited {
+    color: darkviolet;
+}
+
+#pink:link, #pink:visited {
+    color: deeppink;
+}
+
+#blue:link, #blue:visited {
+    color: blue;
+}
+
+#green:link, #green:visited {
+    color: green;
+}
+
+#navigation a:hover {
+    color: #fff;
+}
+
+#shop {
+    text-align: center;
+    margin: 30px auto;
+}
+
+#toy-shop {
+    width: 750px;
+    height: 450px;
+    border-radius: 150px;
+}
+
+.sub-heading {
+    text-transform: uppercase;
+    text-align: center;
+    text-decoration: underline;
+    font-family: cursive;
+}
+
+#para {
+    text-align: center;
+    border: 4px double orangered;
+    margin: 26px;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#girls-toys {
+    background-image: url("rkin.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+#other-toys {
+    background-image: url("rtkin.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+#toy-images {
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.toy {
+    display: inline-block;
+    text-align: center;
+}
+
+
+figcaption {
+    background-color: #A981B6;
+    margin: 10px auto;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+
+#boys-toys {
+    background-image: url("borjkin.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+#contact {
+    background-image: url("rtjk.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+.wordspace {
+    word-spacing: 0.5em;
+}
+
+.cont {
+    padding: 20px;
+}
+#home-page {
+    max-width: 850px;
+    background-color: rgba(220, 100, 200, 0.8); /*                              , 80%              */
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 15px;
+    opacity: 0.9;
+    text-align: center;
+}
+
+/*            #girls-page */
+#girls-page {
+    width: 850px;
+    background-color: hsl(356, 60%, 80%); /*                      */
+    margin: 20px auto;
+    padding: 10px;
+    opacity: 0.9;
+    border-radius: 15px;
+}
+
+/*            #other-page */
+#other-page {
+    width: 850px;
+    background-color: #999999; /*       -             #777777 */
+    margin: 20px auto;
+    padding: 10px;
+    opacity: 0.8;
+    border-radius: 15px;
+}
+
+/*            #boys-page */
+#boys-page {
+    width: 850px;
+    background-color: #BDE0FE; /*                        */
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 15px;
+    opacity: 0.8;
+}
+
+/*            #contact-page */
+#contact-page {
+    width: 850px;
+    background-color: #C1E1A6; /*                */
+    margin: 20px auto;
+    padding: 10px;
+    border-radius: 15px;
+    opacity: 0.8;
+}
+
+footer {
+    width: 550px;
+    text-align: center;
+    margin: 20px auto;
+    color: #000;
+    border: 2px solid darkslategrey;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #777777;
+}
+.buy-button {
+    background-color: #4CAF50; /*             */
+    border: none;
+    color: white; /*             */
+    padding: 15px 32px; /*                    */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer; /*                                 */
+    border-radius: 8px; /*                   */
+    transition: background-color 0.3s ease; /*                                     */
+}
+
+    .buy-button:hover {
+        background-color: #3e8e41; /*                                    */
+    }
+
+
+
+/* Обновленные стили для корзины (окно поверх страницы) */
+#cart-container {
+    position: fixed; /* Фиксированное положение относительно окна браузера */
+    top: 50%;          /* Вертикальное центрирование */
+    left: 50%;         /* Горизонтальное центрирование */
+    transform: translate(-50%, -50%); /* Корректировка центрирования */
+    background-color: rgba(255, 255, 255, 0.9); /* Белый фон с прозрачностью */
+    border: 2px solid darkslategrey; /* Рамка */
+    padding: 20px;       /* Отступы */
+    border-radius: 10px;   /* Закругленные углы */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Тень */
+    z-index: 1000;       /* Поверх всего остального контента */
+    min-width: 300px;   /* Минимальная ширина */
+    text-align: center; /* Выравнивание текста по центру */
+}
+
+#cart-list {
+    list-style: none;   /* Убираем маркеры списка */
+    padding: 0;          /* Убираем отступы */
+}
+
+#cart-list li {
+    padding: 10px;       /* Отступы для элементов списка */
+    border-bottom: 1px solid #eee; /* Разделитель между элементами */
+}
+
+#cart-list li:last-child {
+    border-bottom: none; /* Убираем разделитель у последнего элемента */
+}
+
+.close-button {
+    /* Стили для кнопки закрытия (можно настроить по вашему вкусу) */
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SEX SHOP</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icon-toys.png">
+</head>
+<body id="contact">
+    <div id="contact-page">
+        <div id="logo">
+            <h1 style="text-align: center ;">Sex Shop</h1>
+        </div>
+        <table>
+            <tr>
+                <td id="navigation" style="text-align: center;">
+                    <ul id="navigation" style="text-align: left;">
+                        <li><a href="index.html" id="purple" style="text-align: left;">about</a></li>
+                        <li><a href="girls.html" id="pink" style="text-align: left;">girls</a></li>
+                        <li><a href="boys.html" id="blue" style="text-align: left;">boys</a></li>
+                        <li><a href="other.html" id="grey" style="text-align: left;">other</a></li>
+                        <li><a href="cart.html" id="cart-link">cart</a></li>
+                        <li><a href="contact.html" id="green" style="text-align: left;">contact</a></li>
+                    </ul>
+                </td>
+                <td>
+
+                    <h1 class="sub-heading">Contact</h1>
+                    <div class="wordspace cont">
+                        <p>
+                            Мы всегда рады получить от вас весточку.
+                            Пожалуйста, не стесняйтесь писать нам о своих запросах, пожеланиях,
+                            отзывах или обо всем, что, по вашему мнению, поможет нам лучше обслуживать вас. <br> <br> You can email us on nastyfenina.1900@gmail.com <br><br> Or you can call us on following numbers
+                            <br>Mobile: +1 (ХХХ)ХХ-ХХ-ХХ
+                        </p>
+                        <h3>ADDRESS:</h3>
+                        <p>Дэнвиль, Триштатьте, США </p>
+                    </div>
+                    <br>
+                    <footer>
+                        <div id="foot">
+                            <p><a href="#">terms & conditions</a> | <a href="#">privacy policy</a></p>
+                            <p>copyright © nastyfenina1900@.com 2024 </p>
+                            <p>developed by fff</p>
+                        </div>
+                    </footer>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- Контейнер корзины (добавлен вне таблицы и основного контента) -->
+    <div id="cart-container" style="display: none;">
+        <h2>cart</h2>
+        <button class="close-button" onclick="closeCart()">Закрыть</button>
+        <ul id="cart-list">
+            <!-- Здесь будут отображаться товары -->
+        </ul>
+    </div>
+</body>
+
+</html>
+<script>
+    // Массив для хранения добавленных в корзину товаров
+    let cartItems = [];
+
+    // Функция для добавления товара в корзину (заглушка)
+    function addToCart(productName) {
+        cartItems.push(productName);
+        alert(productName + ' добавлен в корзину!'); // Простое уведомление
+    }
+
+    // Функция для отображения корзины
+    function showCart() {
+        const cartContainer = document.getElementById('cart-container');
+        const cartList = document.getElementById('cart-list');
+
+        // Очищаем список перед заполнением
+        cartList.innerHTML = '';
+
+        // Заполняем список товарами из массива
+        cartItems.forEach(item => {
+            const li = document.createElement('li');
+            li.textContent = item;
+            cartList.appendChild(li);
+        });
+
+        // Отображаем контейнер корзины
+        cartContainer.style.display = 'block';
+    }
+
+    // Функция для закрытия корзины
+    function closeCart() {
+        const cartContainer = document.getElementById('cart-container');
+        cartContainer.style.display = 'none';
+    }
+
+    // Обработчики событий
+    document.addEventListener('DOMContentLoaded', () => {
+        // Находим все кнопки "Купить" и добавляем обработчик клика
+        const buyButtons = document.querySelectorAll('.buy-button');
+        buyButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Получаем название товара (предполагается, что оно где-то рядом с кнопкой)
+                const productName = button.closest('.toy').querySelector('figcaption').textContent; //Достает имя из элемента figcaption
+                addToCart(productName);
+            });
+        });
+
+        // Находим ссылку на корзину и добавляем обработчик клика
+        const cartLink = document.getElementById('cart-link');
+        cartLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Предотвращаем переход по ссылке
+            showCart();
+        });
+
+        // Находим кнопку закрытия корзины и добавляем обработчик клика
+        const closeButton = document.querySelector('#cart-container .close-button');
+        closeButton.addEventListener('click', closeCart);
+    });
+</script>
+
+

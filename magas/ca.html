@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .mermaid {
+            transform-origin: top left; /* Устанавливает точку отсчета для масштабирования */
+        }
+
+        /* Стили для улучшения внешнего вида узлов */
+        .node rect {
+            width: 200px; /* Для увеличения ширины узлов */
+            height: auto; /* Автоматическая высота для адаптации к тексту */
+            rx: 5; /* Радиус скругления углов */
+            ry: 5; /* Радиус скругления углов */
+        }
+
+        /* Стили для текста в узлах */
+        .node text {
+            font-size: 14px; /* Увеличенный размер шрифта */
+            overflow: hidden; /* Обрезает текст, выходящий за пределы */
+            text-overflow: ellipsis; /* Добавляет многоточие для длинного текста */
+            white-space: pre-wrap; /* Позволяет перенос текста на новую строку с учетом пробелов */
+        }
+    </style>
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+        mermaid.initialize({ startOnLoad: true });
+    </script>
+</head>
+<body>
+    <div class="mermaid">
+        graph TD
+            A(Начало) --> B[Входные данные: матрица]
+            B --> C[Минимизация]
+            C --> D{Есть ли минимум?}
+            D -- Да --> E[Определяем элементы]
+            D -- Нет --> K(Конец)
+            E --> G[Делим элементы на количество приборов]
+            G --> H[Вычисляем процессоры]
+            H --> J[Вывод результатов]
+            J --> K(Конец)
+    </div>
+</body>
+</html>
